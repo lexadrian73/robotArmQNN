@@ -48,7 +48,7 @@ function weights = trainQNN(numNeuronsLayers, transferFunctions, options, agent)
     
     for epoch = 1:numEpochs
         defaultPosition(obj);
-        pause(2);
+        pause(1.5);
         % State
         state = stateRobot(obj);
 
