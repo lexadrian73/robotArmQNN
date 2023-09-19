@@ -11,7 +11,7 @@ function QNN_test()
     numEvaluations = 50;
     obj            = connectRobot();
     defaultPosition(obj);
-    pause(2);
+    pause(1.5);
 
     for i = 1:numEvaluations
         press = obj.TouchPressed(2);
