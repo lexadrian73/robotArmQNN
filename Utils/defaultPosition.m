@@ -1,7 +1,7 @@
 function defaultPosition(obj)
     % defaultPosition - Establece la posición inicial de los ángulos del agente
     
-    state_real = estadoRobot(obj);
+    state_real = stateRobot(obj);
     speedA     = 20;
     speedB     = 20;
     

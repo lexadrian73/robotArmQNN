@@ -18,7 +18,6 @@ function testQNN_robot(obj, weights, transferFunctions, options, agent)
         Qval   = A{end}(:, 2:end);
         %possible_actions_array = possible_actions(vec2state(state), agent);
         possible_actions_array = possibleActions(state, agent);
-        pause(2)
         [maxQ, ~] = max(Qval(possible_actions_array));
         idx = find(Qval == maxQ);
         action_value = idx;
@@ -27,7 +26,7 @@ function testQNN_robot(obj, weights, transferFunctions, options, agent)
         action(obj, action_value, agent)
 
         % Getting the new state
-        new_state = stateRobot(obj);
+        new_state    = stateRobot(obj);
         new_state(2) = estimatedValue(new_state(2), valuesA, toleranceA);
         new_state(3) = estimatedValue(new_state(3), valuesB, toleranceB);
 
