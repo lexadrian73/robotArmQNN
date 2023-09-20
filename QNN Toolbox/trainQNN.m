@@ -1,4 +1,6 @@
 function weights = trainQNN(numNeuronsLayers, transferFunctions, options, agent)
+    % trainQNN - Se encarga de entrenar una red neuronal que se utiliza en el proceso de aprendizaje
+
     % Connect robot
     obj = connectRobot();
     % Window length for data smoothing

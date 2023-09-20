@@ -1,5 +1,5 @@
 function obj = connectRobot()
-% connectRobot - Conecta el robot EV3
+    % connectRobot - Función que establece la conexión con el ambiente del robot construido
 
     try
         addpath('EV3\');

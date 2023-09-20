@@ -1,5 +1,7 @@
 function QNN_train()
-    clc;
+    % QNN_train - Es la función principal que coordina el entrenamiento del agente Q-learning
+
+	clc;
     close all;
     warning off all;
     

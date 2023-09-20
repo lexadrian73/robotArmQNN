@@ -49,3 +49,9 @@ Para probar el robot entrenado, siga estos pasos:
 1. Ejecute el script de prueba QNN_test.m.
    1. net: Esta variable se utiliza para cargar el modelo entrenado.
    2. testQNN_robot.m: Este archivo ubicado dentro de la carpeta QNN Toolbox se utiliza para llevar a cabo la fase de prueba. En esta fase, el agente utiliza la red neuronal entrenada para tomar decisiones en un entorno específico (en este caso, un robot). La función comienza con la configuración inicial del agente y el entorno, y luego entra en un bucle en el que el agente toma decisiones basadas en los valores Q calculados por la red neuronal. El agente interactúa con el entorno, selecciona acciones y registra las transiciones de estado hasta que se cumplan ciertas condiciones de finalización, como alcanzar un estado terminal o un número máximo de pasos. Durante el proceso, se imprime información relevante, como los estados actuales y nuevos y la distancia recorrida.
+
+## Modelos
+
+Los modelos obtenidos son los siguientes:
+1.	QNN_Trained_Model_r.mat: modelo del entrenamiento simulado.
+2.	QNN_Trained_Model_F.mat: modelo entrenando sobre modelo QNN_Trained_Model_r.mat (robot en entorno real).

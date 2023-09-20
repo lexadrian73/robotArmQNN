@@ -1,5 +1,5 @@
 function state = stateRobot(obj)
-    % state -Funcion para obtener la posicion actual del agente
+    % state - Función para obtener la posicion actual del agente
     
     try
         sensor = double(obj.UltrasonicDist(1));
