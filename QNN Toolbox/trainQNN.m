@@ -7,9 +7,9 @@ function weights = trainQNN(numNeuronsLayers, transferFunctions, options, agent)
     learningRate = options.learningRate;
     numEpochs    = options.numEpochs;
     % Random initialization of the weights
-    theta = randInitializeWeights(numNeuronsLayers);
-    %data = load('QNN_Trained_Model_r.mat');
-    %theta = flattenWeights(data.weights);
+    % theta = randInitializeWeights(numNeuronsLayers);
+    data = load('QNN_Trained_Model_r.mat');
+    theta = flattenWeights(data.weights);
     % Learning rate for training the ANN
     alpha = options.learningRate;
     % Epsilon
@@ -35,7 +35,7 @@ function weights = trainQNN(numNeuronsLayers, transferFunctions, options, agent)
     % Distance
     distance_traveled  = zeros(1, numEpochs);
     % Maximum number of interactions allowed
-    maxIterationsAllowed = 500;
+    maxIterationsAllowed = 50;
     % Buffer experience replay
     maxBufferSize = options.maxBufferSize;
     bufferExperienceReplay = cell(maxBufferSize, 1);
@@ -45,9 +45,10 @@ function weights = trainQNN(numNeuronsLayers, transferFunctions, options, agent)
     toleranceA = 10;
     valuesB    = [0, 40, 80, 120, 160, 200];
     toleranceB = 10;
+
+    defaultPosition(obj);
     
-    for epoch = 1:numEpochs
-        defaultPosition(obj);
+    for epoch = 1:numEpochs        
         pause(1.5);
         % State
         state = stateRobot(obj);

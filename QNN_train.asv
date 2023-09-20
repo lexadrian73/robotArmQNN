@@ -16,7 +16,7 @@ function QNN_train()
     options.reluThresh = 0;
     options.lambda = 0; % regularization term
     % SGD and online learning settings
-    options.numEpochs = 50;                    % DEFINIR
+    options.numEpochs = 100;                    % DEFINIR
     
     % Momentum update
     options.learningRate = 0.1;                   % DEFINIR
@@ -29,15 +29,15 @@ function QNN_train()
     options. W = 25;
     
     % Q-learning settings
-    options.gamma   = 0.6; % Q-learning parameter  %DEFINIR
+    options.gamma   = 0.9; % Q-learning parameter  %DEFINIR
     options.epsilon = 0.2;   % Initial value of epsilon for the epsilon-greedy exploration %DEFINIR
     options.thao    = -2;
 
     % Buffer experience replay
-    options.maxBufferSize    = 5000;
+    options.maxBufferSize    = 2000;
     options.replayBufferSize = 32;
     options.B = 100; % Initialize number of batches
-    options.U = 4;  % Initialize number of updates per batch
+    options.U = 10;  % Initialize number of updates per batch
     options.sizeBufferExperienceReplay = 2000; % DEFINIR
     
     % Agent
@@ -52,7 +52,7 @@ function QNN_train()
     weights = trainQNN(numNeuronsLayers, transferFunctions, options, agent);
     elapsedTimeHours = toc(tStart)/3600;
     fprintf('\n Elapsed time for training: %3.3f h \n', elapsedTimeHours);
-    save('QNN_Trained_Model_F.mat',...
+    save('QNN_Trained_Model.mat',...
          'weights', ...
          'numNeuronsLayers',...
          'transferFunctions',...

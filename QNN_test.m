@@ -6,7 +6,7 @@ function QNN_test()
     addpath('Utils');
     addpath('EV3');
     % Load net
-    net = load('QNN_Trained_Model_r.mat');
+    net = load('QNN_Trained_Model_F.mat');
     
     numEvaluations = 50;
     obj            = connectRobot();
